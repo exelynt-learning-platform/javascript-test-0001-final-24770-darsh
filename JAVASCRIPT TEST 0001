@@ -1,0 +1,37 @@
+
+
+function printPattern(n = 5) {
+  const totalRows = (2 * n) - 1;
+
+  for (let row = 1; row <= totalRows; row++) {
+    let line = "";
+
+
+    if (row === 1 || row === totalRows) {
+      line = "*";
+    }
+
+    // Second and second-last row
+    else if (row === 2 || row === totalRows - 1) {
+      line = "* *";
+    }
+
+
+    else {
+      const innerSpaces = 3;
+
+      line += "*";
+
+      for (let s = 1; s <= innerSpaces; s++) {
+        line += " ";
+      }
+
+      line += "*";
+    }
+
+    console.log(line);
+  }
+}
+
+
+printPattern();
